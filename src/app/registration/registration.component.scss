@@ -1,0 +1,218 @@
+// .new{
+//     font-family:primary-font-family;
+//     font-size:20px;
+//     min-height:100vh;
+//     display:flex;
+//     align-items:center;
+//     justify-content:center;
+//     color:red;
+//   }
+//   .container{
+//   max-width: 450px;
+//   text-align:center;
+//   }
+//   .wrapper input{
+//     background-color:bisque;
+//     border-color:white;
+//     color:black;
+//   }
+//   .wrapper input:focus{
+//   box-shadow: inset 6px 4px;
+//   }
+  // .register_btn{
+  // color: azure;
+  // background:transparent;
+  // border:3px solid  azure;
+  // border-radius:10px;
+  // margin-top: 10px;
+  //   padding: 10px;
+  //   font-weight: 700;
+  // }
+//   .img{
+//     width: 40px;
+//   margin-bottom: 15px;
+//   }
+
+
+
+  // .fw-normal{
+  // color:blue;
+  // padding-top: 5px;
+  // font-size: 19PX;
+  // }
+//   .login{
+//   font-size :25px;
+//   margin-left:-10px;
+//   color:white;
+//   margin-left: 10px;
+//   text-decoration:none;
+//   }
+//   .fw-bolder {
+//   color:whitesmoke;
+//   }
+//   .gradient-custom {
+
+//     background: linear-gradient(to bottom right, rgb(251, 215, 147), rgba(245, 87, 108, 1))
+//   }
+
+
+//   second page 
+.gradient-custom {
+
+    background: linear-gradient(to bottom right, rgb(165, 128, 60), rgba(245, 87, 108, 1))
+  }
+  
+  button {
+    border: none;
+  }
+  
+  .mobile {
+    margin-left: 25px;
+  }
+  
+  .btns {
+    margin-left: 80%;
+  }
+  p{
+    text-align: center;
+    font-weight: 800;
+    color: rgb(13, 116, 116);
+    font-size:25px;
+  }
+
+  .link-btn {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    font-size: 0.8em;
+    padding: 0px;
+  }
+  
+  .link-btn:hover {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    font-size: 0.8em;
+    padding: 0px;
+  }
+
+  //three
+
+//   /* Google Poppins Font CDN Link */
+
+// .buttons {
+//     border: none;
+//   }
+
+// *{
+//     margin:0;
+//     padding:0;
+//     box-sizing: border-box;
+// }
+
+// /* Variables */
+// :root{
+//     --primary-font-family: 'Poppins', sans-serif;
+//     --light-white:#f5f8fa;
+//     --gray:#5e6278;
+//     --gray-1:#e3e3e3;
+// }
+// body{
+//     font-family:var(--primary-font-family);
+//     font-size: 14px;
+// } 
+
+// /* Main CSS OTP Verification New Changing */ 
+// .cc{
+//     margin-left: 35%;
+// }
+// .wrapper{
+//     padding:0 0 100px;
+   
+//     background-position:bottom center;
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//     background-attachment: fixed;
+//     min-height: 100%;
+//     /* height:100vh;
+//     display:flex;
+//     align-items:center;
+//     justify-content:center; */
+// }
+// .wrapper .logo img{
+//     max-width:40%;
+// }
+// .wrapper input{
+//     background-color:var(--light-white);
+//     border-color:var(--light-white);
+//     color:var(--gray);
+// }
+// .wrapper input:focus{
+//     box-shadow: none;
+// }
+// .wrapper .password-info{
+//     font-size:10px;
+// }
+// .wrapper .submit_btn{
+//     padding:10px 15px;
+//     font-weight:500;
+// }
+// .wrapper .submit_btns{
+//     padding:6px 10px;
+//     font-weight:450;
+//     background-color: rgb(178, 238, 150);
+// }
+// .wrapper .login_with{
+//     padding:8px 15px;
+//     font-size:13px;
+//     font-weight: 500;
+//     transition:0.3s ease-in-out;
+// }
+// .wrapper .submit_btn:focus,
+// .wrapper .login_with:focus{
+//     box-shadow: none;
+// }
+// .wrapper .submit_btns:focus,
+// .wrapper .login_with:focus{
+//     box-shadow: none;
+// }
+// .wrapper .login_with:hover{
+//     background-color:var(--gray-1);
+//     border-color:var(--gray-1);
+// }
+// .wrapper .login_with img{
+//     max-width:7%;
+// } 
+
+// /* OTP Verification CSS */
+// .wrapper .otp_input input{
+//     width:14%;
+//     height:70px;
+//     text-align: center;
+//     font-size: 20px;
+//     font-weight: 600;
+// }
+
+// .gradient-custom {
+
+//     background: linear-gradient(to bottom right, rgb(251, 215, 147), rgba(245, 87, 108, 1))
+//   }
+
+// @media (max-width:1200px){
+//     .wrapper .otp_input input{ 
+//         height:50px; 
+//     }
+// }
+// @media (max-width:767px){
+//     .wrapper .otp_input input{ 
+//         height:40px; 
+//     }
+// }
+        
+      

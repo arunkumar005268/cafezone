@@ -1,0 +1,132 @@
+<!-- <app-generate></app-generate> -->
+<mat-horizontal-stepper linear #stepper class="gradient-custom vh-100">
+
+    <mat-step label="Regestration" [stepControl]="signupForm">
+        <div class="container  py-5 h-100">
+            <div class="row justify-content-center align-items-center ">
+                <div class="col-12 col-lg-9 col-xl-7">
+                    <div class="card" style="border-radius: 10px;">
+                        <div class="card-body p-4 p-md-5">
+                            <p class="text-center mb-2 pb-2 pb-md-0 mb-md-3 ">SignUp</p>
+                            <form [formGroup]="signupForm">
+                                <div class="form-floating mb-3 form-group">
+                                    <input formControlName="userName" type="text" class="form-control"
+                                        placeholder="username"
+                                        [ngClass]="{ 'is-valid': submit && !signupForm.controls['userName'].errors}" />
+                                    <div *ngIf="submit && signupForm.controls['userName'].errors"
+                                        class="text-danger fw-bolder">*Please Fill Name </div>
+                                    <label for="floatinginput">Name</label>
+                                </div>
+                                <div class="form-floating mb-3 form-group">
+                                    <input formControlName="email" type="email" class="form-control" id="floatinginput"
+                                        placeholder="email"
+                                        [ngClass]="{ 'is-valid': submit &&  !signupForm.controls['email'].errors}" />
+                                    <div *ngIf="submit && signupForm.controls['email'].errors"
+                                        class="text-danger fw-bolder">*Please Enter The Valid Email
+                                    </div>
+                                    <label for="floatinginput">Email</label>
+                                </div>
+                                <div class="form-floating mb-3 form-group">
+                                    <input formControlName="phnumber" type="text" class="form-control" placeholder="num"
+                                        [ngClass]="{ 'is-valid':submit && !signupForm.controls['phnumber'].errors}"
+                                        (keypress)="keyPressNumbers($event)" />
+                                    <div *ngIf="submit && signupForm.controls['phnumber'].errors"
+                                        class="text-danger fw-bolder">*Please Fill The valid Number
+
+                                    </div>
+                                    <label for="floatinginput">Phone Number</label>
+                                </div>
+                                <button type="button" class="btn btn-primary" matStepperNext (click)="reg()">Register
+                                </button>
+                                <!-- <button type="register" class="btn  register_btn w-50  "> <a [routerLink]="['/sentotp']"> Register</a>  </button> -->
+                                <div class="fw-normal  md-4">
+                                    <h5>Already Have An Account?</h5> <a href="#"><b class="login">Login</b></a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </mat-step>
+    <mat-step label="Otp mode" [stepControl]="secFormGroup">
+        <section>
+            <div class="container py-5 h-100  ">
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col-12 col-lg-9 col-xl-7">
+                        <div class="card" style="border-radius: 10px;">
+                            <div class="card-body p-4 p-md-5">
+                                <p class="text-center mb-2 pb-2 pb-md-0 mb-md-3 ">Preferred mode of communication</p>
+
+                                <form [formGroup]="secFormGroup">
+
+                                    <div class="align-items-center text-center">
+                                        <button class="btn " (click)="mailotp()" matStepperNext  type="button"><img src="/assets/icon/maotp.jpg"
+                                                alt="mailotp" height="100px"></button>
+                                        <button class="btn mobile " type="button" matStepperNext><img
+                                                src="/assets/icon/motp.jpg" alt="mobileotp" height="100px"></button>
+                                    </div>
+
+                                    <div class="align-items-center mt-2 pt-2">
+                                        <button class=" btn-danger" mat-button matStepperPrevious>
+                                            Back</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </mat-step>
+    <mat-step label="Verify">
+        <section class="wrapper">
+            <div class="container py-5 h-100 ">
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col-12 col-lg-9 col-xl-7">
+                        <form class="rounded bg-white shadow p-5 mt-5">
+                            <h3 class="text-dark fw-bolder fs-4 mb-2"> Enter the otp sent to</h3>
+                            <div class="d-flex align-items-center justify-content-center fw-bold mb-4">
+                                <div>
+                                    <mat-icon>stay_current_portrait</mat-icon>{{this.signupForm.value.phnumber}}
+                                    
+                                </div>
+                                <div>
+                                    <mat-icon>email</mat-icon>{{this.signupForm.value.email}}
+                                </div>
+                            </div>
+                            <div class="otp_input text-start mb-2">
+                                <label for="digit">Type your 6 digit security code</label>
+                                <div class="d-flex align-items-center justify-content-between mt-2">
+                                    <input type="text" autofocus #txt1 maxlength="1" (keyup)="move($event,'',txt1,txt2)"
+                                        class="form-control" placeholder="">
+                                    <input type="text" #txt2 maxlength="1" (keyup)="move($event,txt1,txt2,txt3 )"
+                                        class="form-control" placeholder="">
+                                    <input type="text" #txt3 maxlength="1" (keyup)="move($event,txt2,txt3,txt4 )"
+                                        class="form-control" placeholder="">
+                                    <input type="text" #txt4 maxlength="1" (keyup)="move($event,txt3,txt4,txt5 )"
+                                        class="form-control" placeholder="">
+                                    <input type="text" #txt5 maxlength="1" (keyup)="move($event,txt4,txt5,txt6 )"
+                                        class="form-control" placeholder="">
+                                    <input type="text" #txt6 maxlength="1" (keyup)="move($event,txt5,txt6,'' )"
+                                        class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary submit_btn my-4">Submit</button>
+                            <div class="fw-normal text-muted mb-2">
+                                Didn't get the code ? <span class="sec">30Sec</span> <button class="btn  submit_btns ">
+                                    Resend</button>
+                                    
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </mat-step>
+
+</mat-horizontal-stepper>
