@@ -12,7 +12,7 @@ export class RegistrationComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,router: Router) { }
 
-  
+  selectedItem!:number;
 
   signupForm!: FormGroup;
   secFormGroup!:FormGroup;
@@ -51,7 +51,9 @@ export class RegistrationComponent implements OnInit {
    console.log(this.signupForm.value)
 
   }
-  mailotp(){
+  mailotp(type:number){
+    console.log(type);
+    this.selectedItem = type;
    this.signupForm.value.email 
    
   }

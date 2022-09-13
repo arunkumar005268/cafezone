@@ -62,9 +62,9 @@
                                 <form [formGroup]="secFormGroup">
 
                                     <div class="align-items-center text-center">
-                                        <button class="btn " (click)="mailotp()" matStepperNext  type="button"><img src="/assets/icon/maotp.jpg"
+                                        <button class="btn " (click)="mailotp(1)" matStepperNext  type="button"><img src="/assets/icon/maotp.jpg"
                                                 alt="mailotp" height="100px"></button>
-                                        <button class="btn mobile " type="button" matStepperNext><img
+                                        <button class="btn mobile " type="button" (click)="mailotp(2)" matStepperNext><img
                                                 src="/assets/icon/motp.jpg" alt="mobileotp" height="100px"></button>
                                     </div>
 
@@ -90,11 +90,11 @@
                         <form class="rounded bg-white shadow p-5 mt-5">
                             <h3 class="text-dark fw-bolder fs-4 mb-2"> Enter the otp sent to</h3>
                             <div class="d-flex align-items-center justify-content-center fw-bold mb-4">
-                                <div>
+                                <div *ngIf="selectedItem === 2">
                                     <mat-icon>stay_current_portrait</mat-icon>{{this.signupForm.value.phnumber}}
                                     
                                 </div>
-                                <div>
+                                <div *ngIf="selectedItem === 1">
                                     <mat-icon>email</mat-icon>{{this.signupForm.value.email}}
                                 </div>
                             </div>
